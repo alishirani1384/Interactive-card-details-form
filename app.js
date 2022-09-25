@@ -31,12 +31,14 @@ function setCardCvc(e) {
 function handleSubmit(e) {
     e.preventDefault();
     if (!nameInp.value) {
-        nameInp.classList.add('error')
+        nameInp.classList.add('error');
     } else {
         nameInp.classList.remove("error");
     }
     if (!numberInp.value) {
         numberInp.classList.add('error')
+    } else if (numberInp.value.length < 16) {
+        numberInp.classList.add("error")
     } else {
         numberInp.classList.remove("error");
     }
@@ -55,9 +57,16 @@ function handleSubmit(e) {
     } else {
         cvcInp.classList.remove("error");
     }
-    if (nameInp.value && numberInp.value && monthInp.value && yearInp.value && cvcInp.value) {
-        compeleted.classList.remove("hidden");
-        form.classList.add("hidden");
+    if (
+      nameInp.value &&
+      numberInp.value &&
+      monthInp.value &&
+      yearInp.value &&
+      cvcInp.value &&
+      numberInp.value.length == 16
+    ) {
+      compeleted.classList.remove("hidden");
+      form.classList.add("hidden");
     }
   
 }
