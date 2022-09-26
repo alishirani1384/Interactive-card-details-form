@@ -73,6 +73,14 @@ body{
 .error{
     border: 2px solid var(--Red);
 }
+.error_message{
+    gap: 0;
+}
+.error_message::after{
+    content: "cant't be blank";
+    color: var(--Red);
+    margin-top: .2rem;
+}
 #cvc{
     position: absolute;
     right: 3.5rem;
@@ -87,7 +95,7 @@ body{
 }
 .right_section form{
    display: grid;
-   gap: 2rem;
+   gap: 1rem;
    width: 350px;
    grid-template-columns: repeat(2,1fr);
    grid-template-rows: repeat(4,1fr);

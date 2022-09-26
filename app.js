@@ -31,31 +31,41 @@ function setCardCvc(e) {
 function handleSubmit(e) {
     e.preventDefault();
     if (!nameInp.value) {
-        nameInp.classList.add('error');
+      nameInp.classList.add('error');
+      nameInp.parentElement.classList.add("error_message")
     } else {
-        nameInp.classList.remove("error");
+      nameInp.classList.remove("error");
+      nameInp.parentElement.classList.remove("error_message");
     }
     if (!numberInp.value) {
-        numberInp.classList.add('error')
+      numberInp.classList.add('error')
+      numberInp.parentElement.classList.add("error_message");
     } else if (numberInp.value.length < 16) {
         numberInp.classList.add("error")
     } else {
-        numberInp.classList.remove("error");
+      numberInp.classList.remove("error");
+      numberInp.parentElement.classList.remove("error_message");
     }
     if (!monthInp.value) {
-        monthInp.classList.add("error")
+      monthInp.classList.add("error")
+      monthInp.parentElement.classList.add("error_message");
     } else {
-        monthInp.classList.remove("error");
+      monthInp.classList.remove("error");
+      monthInp.parentElement.classList.remove("error_message");
     }
     if (!yearInp.value) {
-        yearInp.classList.add("error")
+      yearInp.classList.add("error")
+      yearInp.parentElement.classList.add("error_message");
     } else {
-        yearInp.classList.remove("error");
+      yearInp.classList.remove("error");
+      yearInp.parentElement.classList.remove("error_message");
     }
     if (!cvcInp.value) {
-        cvcInp.classList.add("error")
+      cvcInp.classList.add("error")
+      cvcInp.parentElement.classList.add("error_message");
     } else {
-        cvcInp.classList.remove("error");
+      cvcInp.classList.remove("error");
+      cvcInp.parentElement.classList.remove("error_message");
     }
     if (
       nameInp.value &&
